@@ -1,6 +1,11 @@
 const canvas = document.querySelector("canvas");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
+let intervalTime = 1200;
+
+if (innerWidth < 500) {
+  intervalTime = 1000;
+}
 
 const c = canvas.getContext("2d");
 let mouse = {
@@ -148,7 +153,7 @@ const missileAttack = () => {
         `hsl(${Math.random() * 360}, 100%, 50%)`
       )
     );
-  }, 1500);
+  }, intervalTime);
 };
 
 // Animation
