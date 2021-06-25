@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro&display=swap");
+
+:root {
+  --background: url("https://user-images.githubusercontent.com/77880663/123456070-0e1c1e80-d600-11eb-9435-f0e9e69a4e0f.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#scoreCard {
+  position: fixed;
+  color: white;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+#startGame-btn {
+  position: fixed;
+  width: 220px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -110px;
+  font-size: 24px;
+  padding: 4px 8px 4px 8px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* #startGame-btn {
+   
+   
+} */
+
+#startGame-btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#startGame-btn:active {
+  color: #000;
+}
+
+#startGame-btn:active:after {
+  background: transparent;
+}
+
+#startGame-btn:hover:before {
+  opacity: 1;
+}
+
+#startGame-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
