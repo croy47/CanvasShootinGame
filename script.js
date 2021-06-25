@@ -4,7 +4,7 @@ canvas.height = innerHeight;
 let intervalTime = 1200;
 
 if (innerWidth < 500) {
-  intervalTime = 600;
+  intervalTime = 700;
 }
 
 const c = canvas.getContext("2d");
