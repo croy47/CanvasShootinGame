@@ -1,10 +1,10 @@
 const canvas = document.querySelector("canvas");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
-let intervalTime = 1200;
+let intervalTime = 1300;
 
 if (innerWidth < 500) {
-  intervalTime = 1000;
+  intervalTime = 850;
 }
 
 const c = canvas.getContext("2d");
